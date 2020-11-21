@@ -5,32 +5,32 @@ exports.getusers = function () {
     return new Promise(function (resolve, reject) {
         var examples = {};
         examples['application/json'] = [{
+            "id": 0,
+            "name": "Jhon Snow",
+            "email": "jonny@example.com",
+            "birthDate": "birthDate",
             "address": {
-                "zip": "zip",
-                "country": "country",
-                "city": "city",
-                "street": "street",
+                "zip": "1234",
+                "country": "España",
+                "city": "Madrid",
+                "street": "Calle falsa 1234",
                 "id": 6,
                 "state": "state"
-            },
-            "name": "name",
-            "id": 0,
-            "birthDate": "birthDate",
-            "email": "email"
+            }
         }, {
+            "id": 1,
+            "name": "Paco",
+            "email": "paco@example.com",
+            "birthDate": "birthDate",
             "address": {
-                "zip": "zip",
-                "country": "country",
-                "city": "city",
-                "street": "street",
+                "zip": "3424",
+                "country": "España",
+                "city": "Barcelona",
+                "street": "Calle falsa 4321",
                 "id": 6,
                 "state": "state"
-            },
-            "name": "name",
-            "id": 0,
-            "birthDate": "birthDate",
-            "email": "email"
-        }];
+            }
+        },];
         if (Object.keys(examples).length > 0) {
             resolve(examples[Object.keys(examples)[0]]);
         } else {
@@ -43,45 +43,58 @@ exports.createUsers = function (user) {
     return new Promise(function (resolve, reject) {
         var examples = {};
         examples['application/json'] = {
+            "id": 0,
+            "name": "Jhon Snow",
+            "email": "jonny@example.com",
+            "birthDate": "birthDate",
             "address": {
-                "zip": "zip",
-                "country": "country",
-                "city": "city",
-                "street": "street",
+                "zip": "1234",
+                "country": "España",
+                "city": "Madrid",
+                "street": "Calle falsa 1234",
                 "id": 6,
                 "state": "state"
-            },
-            "name": "name",
-            "id": 0,
-            "birthDate": "birthDate",
-            "email": "email"
+            }
         };
         if (Object.keys(examples).length > 0) {
             resolve(user);
         } else {
-            resolve(examples[Object.keys(examples)[0]]);
+            resolve();
         }
     });
 }
 exports.getusersByIdUserId = function (userId) {
     return new Promise(function (resolve, reject) {
         let examples = {};
-        examples['application/json'] = {
+        examples = [{
+            "id": 0,
+            "name": "Jhon Snow",
+            "email": "jonny@example.com",
+            "birthDate": "birthDate",
             "address": {
-                "zip": "zip",
-                "country": "country",
-                "city": "city",
-                "street": "street",
+                "zip": "1234",
+                "country": "España",
+                "city": "Madrid",
+                "street": "Calle falsa 1234",
                 "id": 6,
                 "state": "state"
-            },
-            "name": "name",
-            "id": 0,
+            }
+        }, {
+            "id": 1,
+            "name": "Paco",
+            "email": "paco@example.com",
             "birthDate": "birthDate",
-            "email": "email"
-        };
+            "address": {
+                "zip": "3424",
+                "country": "España",
+                "city": "Barcelona",
+                "street": "Calle falsa 4321",
+                "id": 6,
+                "state": "state"
+            }
+        },]
         if (Object.keys(examples).length > 0) {
-            resolve(examples[Object.keys(examples)[0]]);
+            resolve(examples.filter(user => user.id === userId));
         } else {
             resolve();
         }
@@ -92,6 +105,10 @@ exports.updateUsersById = function (userId, user) {
     return new Promise(function (resolve, reject) {
         let examples = {};
         examples['application/json'] = {
+            "id": 0,
+            "name": "name",
+            "email": "email",
+            "birthDate": "birthDate",
             "address": {
                 "zip": "zip",
                 "country": "country",
@@ -100,10 +117,6 @@ exports.updateUsersById = function (userId, user) {
                 "id": 6,
                 "state": "state"
             },
-            "name": "name",
-            "id": 0,
-            "birthDate": "birthDate",
-            "email": "email"
         };
         if (Object.keys(examples).length > 0) {
             resolve(examples[Object.keys(examples)[0]]);
@@ -115,6 +128,6 @@ exports.updateUsersById = function (userId, user) {
 
 exports.deleteUsersById = function (userId) {
     return new Promise(function (resolve, reject) {
-        resolve();
+        resolve('user deleted');
     });
 }
