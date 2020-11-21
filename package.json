@@ -11,8 +11,7 @@
   "dependencies": {
     "connect": "^3.7.0",
     "nodemon": "^2.0.6",
-    "swagger-tools": "^0.10.4",
-    "utils": "^0.3.1"
+    "swagger-tools": "^0.10.4"
   },
   "devDependencies": {
     "jest": "^26.6.3",

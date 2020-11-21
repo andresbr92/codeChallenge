@@ -5,10 +5,11 @@ let http = require('http');
 let path = require('path')
 let swaggerTools = require('swagger-tools');
 
-let serverPort = 4000;
+let serverPort = 3000;
 
 // swaggerRouter configuration
 let options = {
+    swaggerUi: path.join(__dirname, '/api/swagger.json'),
     controllers: path.join(__dirname, './controllers'),
     useStubs: process.env.NODE_ENV === 'development' // Conditionally turn on stubs (mock mode)
 };
@@ -19,7 +20,7 @@ let swaggerDoc = require('./api/swagger.json');
 // Initialize the Swagger middleware
 swaggerTools.initializeMiddleware(swaggerDoc, function (middleware) {
     // Interpret Swagger resources and attach metadata to request - must be first in swagger-tools middleware chain
-    app.use(middleware.swaggerMetadata());
+    app.use(middleware.swaggerMetadata(options));
 
     // Validate Swagger requests
     app.use(middleware.swaggerValidator());
@@ -28,7 +29,7 @@ swaggerTools.initializeMiddleware(swaggerDoc, function (middleware) {
     app.use(middleware.swaggerRouter(options));
 
     // Serve the Swagger documents and Swagger UI
-    app.use(middleware.swaggerUi());
+    app.use(middleware.swaggerUi(options));
 
     // Start the server
     http.createServer(app).listen(serverPort, function () {

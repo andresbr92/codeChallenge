@@ -4,7 +4,6 @@ let utils = require('../utils/writer.js');
 
 module.exports.getusers = function getusers(req, res, next) {
 
-   console.log(req)
     Default.getusers()
         .then(function (response) {
             utils.writeJson(res, response);
