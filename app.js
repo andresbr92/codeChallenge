@@ -1,10 +1,11 @@
 'use strict';
+
 let app = require('connect')();
 let http = require('http');
 let path = require('path')
 let swaggerTools = require('swagger-tools');
 
-let serverPort = 3000;
+let serverPort = 4000;
 
 // swaggerRouter configuration
 let options = {
@@ -31,7 +32,8 @@ swaggerTools.initializeMiddleware(swaggerDoc, function (middleware) {
 
     // Start the server
     http.createServer(app).listen(serverPort, function () {
-        console.log(options)
         console.log('Your server is listening on port %d (http://localhost:%d)', serverPort, serverPort);
     });
 });
+
+module.exports.app

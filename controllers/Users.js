@@ -18,7 +18,6 @@ module.exports.createUsers = function createUsers(req, res, next) {
     let user = req.swagger.params['user'].value;
     Default.createUsers(user)
         .then(function (response) {
-            //utils.writeJson(res, response);
             utils.writeJson(res, response)
         })
         .catch(function (response) {
