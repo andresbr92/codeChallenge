@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "d3c9b2df-4908-4235-b665-8e99368e51e4",
+		"name": "codeChallengeDeployed",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getusers Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-15-237-58-46.eu-west-3.compute.amazonaws.com:4000/users/getusers",
+					"protocol": "http",
+					"host": [
+						"ec2-15-237-58-46",
+						"eu-west-3",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"getusers"
+					]
+				},
+				"description": "OK"
+			},
+			"response": []
+		},
+		{
+			"name": "createUsers Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"id\": 3,\n            \"name\": \"Jhon Snow\",\n            \"email\": \"jonny@example.com\",\n            \"birthDate\": \"birthDate\",\n            \"address\": {\n                \"zip\": \"1234\",\n                \"country\": \"España\",\n                \"city\": \"Madrid\",\n                \"street\": \"Calle falsa 1234\",\n                \"id\": 6,\n                \"state\": \"state\"\n            }\n        }"
+				},
+				"url": {
+					"raw": "http://ec2-15-237-58-46.eu-west-3.compute.amazonaws.com:4000/users/createUsers",
+					"protocol": "http",
+					"host": [
+						"ec2-15-237-58-46",
+						"eu-west-3",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"createUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUsersById Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-15-237-58-46.eu-west-3.compute.amazonaws.com:4000/users/getusersById/0",
+					"protocol": "http",
+					"host": [
+						"ec2-15-237-58-46",
+						"eu-west-3",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"getusersById",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUsersById Copy",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://ec2-15-237-58-46.eu-west-3.compute.amazonaws.com:4000/users/updateUsersById/1",
+					"protocol": "http",
+					"host": [
+						"ec2-15-237-58-46",
+						"eu-west-3",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"updateUsersById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUsersById Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-15-237-58-46.eu-west-3.compute.amazonaws.com:4000/users/deleteUsersById/1",
+					"protocol": "http",
+					"host": [
+						"ec2-15-237-58-46",
+						"eu-west-3",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"deleteUsersById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
