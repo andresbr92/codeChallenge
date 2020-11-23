@@ -1,4 +1,4 @@
-![alt text]
+
 # Code Challenge - Andrés Barros Rivas
 
 ## Sumario
@@ -39,7 +39,7 @@ Actualmente me estoy documentando en AWS y faltan algunas cosas por pulir, como 
 
 ## Testing
 
-Se han añadido 4 test de ejemplo para comprobar los datos generados por la api a falta de investigar y profundizar más en el testeo de apis mediante jest-supertest. 
+Se han añadido 4 test de ejemplo para comprobar los datos generados por la api a falta de investigar y profundizar más en el testeo de apis mediante jest-supertest.
 
 
 

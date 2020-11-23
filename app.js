@@ -5,7 +5,7 @@ let http = require('http');
 let path = require('path')
 let swaggerTools = require('swagger-tools');
 
-let serverPort = 3000;
+let serverPort = 4000;
 
 // swaggerRouter configuration
 let options = {

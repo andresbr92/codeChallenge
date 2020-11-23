@@ -1,11 +1,11 @@
 //import { getusers } from '../services/UserServices.js'
 const getusers = require('../services/UserServices')
-const users = require('../controllers/Users')
+
 
 describe('UserServices', () => {
     
     describe("updateUsersById", () => {
-        it("lskdjf", () => {
+        it("check updateUserById from api", () => {
             const expectedResult = {
                 "address": {
                     "zip": "zip",
@@ -28,15 +28,15 @@ describe('UserServices', () => {
 
     describe("deleteUsersById", () => {
 
-        it("lskdjf", () => {
+        it("chet deleteUsersById from api", () => {
             
-            return expect(getusers.deleteUsersById(1)).resolves.toEqual(undefined)
+            return expect(getusers.deleteUsersById(1)).resolves.toEqual('user deleted')
         })
     })
 
     describe("createUsers", () => {
 
-        it("lskdjf", () => {
+        it("check createUsers from api", () => {
             const expectedValue = {
                 "address": {
                     "zip": "zip",

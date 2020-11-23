@@ -1,5 +1,5 @@
 
-let Default = require('../postman/dev_env/services/UserServices');
+let Default = require('../services/UserServices');
 let utils = require('../utils/writer.js');
 
 module.exports.getusers = function getusers(req, res, next) {
