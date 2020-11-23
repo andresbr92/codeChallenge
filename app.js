@@ -20,7 +20,7 @@ let swaggerDoc = require('./api/swagger.json');
 // Initialize the Swagger middleware
 swaggerTools.initializeMiddleware(swaggerDoc, function (middleware) {
     // Interpret Swagger resources and attach metadata to request - must be first in swagger-tools middleware chain
-    app.use(middleware.swaggerMetadata(options));
+    app.use(middleware.swaggerMetadata());
 
     // Validate Swagger requests
     app.use(middleware.swaggerValidator());
@@ -29,7 +29,7 @@ swaggerTools.initializeMiddleware(swaggerDoc, function (middleware) {
     app.use(middleware.swaggerRouter(options));
 
     // Serve the Swagger documents and Swagger UI
-    app.use(middleware.swaggerUi(options));
+    app.use(middleware.swaggerUi());
 
     // Start the server
     http.createServer(app).listen(serverPort, function () {
