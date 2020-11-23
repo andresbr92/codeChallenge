@@ -24,11 +24,16 @@ Se configuro y personalizo una Ami con ubuntu 20.04, nodejs, npm, para luego ser
 
 Peticiones de la api:
 ```
-http://ec2-15-237-58-46.eu-west-3.compute.amazonaws.com:4000/users/getusers
-http://ec2-15-237-58-46.eu-west-3.compute.amazonaws.com:4000/users/createUsers
-http://ec2-15-237-58-46.eu-west-3.compute.amazonaws.com:4000/users/getusersById/0
-http://ec2-15-237-58-46.eu-west-3.compute.amazonaws.com:4000/users/updateUsersById/0
-http://ec2-15-237-58-46.eu-west-3.compute.amazonaws.com:4000/users/deleteUsersById/1
+
+http://ec2-15-236-186-134.eu-west-3.compute.amazonaws.com:4000/users/getusers
+http://ec2-15-236-186-134.eu-west-3.compute.amazonaws.com:4000/users/createUsers
+http://ec2-15-236-186-134.eu-west-3.compute.amazonaws.com:4000/users/getusersById/0
+http://ec2-15-236-186-134.eu-west-3.compute.amazonaws.com:4000/users/updateUsersById/0
+http://ec2-15-236-186-134.eu-west-3.compute.amazonaws.com:4000/users/deleteUsersById/1
+http://ec2-15-236-186-134.eu-west-3.compute.amazonaws.com:4000/docs/
+http://ec2-15-236-186-134.eu-west-3.compute.amazonaws.com:4000/api-docs
+
+
 
 
 ```
